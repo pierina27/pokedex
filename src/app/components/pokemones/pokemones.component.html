@@ -1,0 +1,13 @@
+<div class="page-header">
+  <h1>Pokemones</h1>
+  <div class="row">
+    <div class="col-lg-3" *ngFor="let pokemon of pokemones">
+        <div class="card text-white mb-3" style="max-width: 20rem;">
+            <div class="card-header bg-info"> {{ pokemon.nombre }}</div>
+            <div class="card-body">
+              <a [routerLink]="['/pokemon', pokemon.id]"><img src="../../../assets/img/{{ pokemon.imagen }}" alt="" class="img-responsive"></a> 
+            </div>
+        </div>
+    </div>
+  </div>
+</div>  

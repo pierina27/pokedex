@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Angulartics2Module } from 'angulartics2';
+import { Angulartics2GoogleTagManager } from 'angulartics2/gtm';
 
 //Servicios
 import { PokemonesService } from './services/pokemones.service';
@@ -23,7 +25,8 @@ import { PokemonInfoComponent } from './components/pokemon-info/pokemon-info.com
   ],
   imports: [
     BrowserModule,
-    POKE_ROUTING
+    POKE_ROUTING,
+    Angulartics2Module.forRoot([ Angulartics2GoogleTagManager ])
   ],
   providers: [],
   bootstrap: [AppComponent]

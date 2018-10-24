@@ -9,7 +9,7 @@ const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'pokemones', component: PokemonesComponent },
     { path: 'pokemon/:id', component: PokemonInfoComponent },
-    { path: '**', redirectTo:"home" },
+    { path: '**', redirectTo: 'home' },
 ];
 
 export const POKE_ROUTING = RouterModule.forRoot(routes);
